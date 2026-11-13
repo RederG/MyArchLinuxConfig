@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Btop
+Comment=A cool task manager
+Exec=kitty btop
+Icon=~/.local/share/icons/ArchLinuxLogo.svg
+Terminal=false

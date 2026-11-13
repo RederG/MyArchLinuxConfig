@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Arch's Yay system updater
+Comment=A cool yay system updater
+Exec=kitty fish -c 'yay_system_updater'
+Icon=~/.local/share/icons/ArchLinuxLogo.svg
+Terminal=false

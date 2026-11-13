@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Arch's Pacman Installer
+Comment=A cool pacman installer
+Exec=kitty fish -c 'pacman_installer'
+Icon=~/.local/share/icons/ArchLinuxLogo.svg
+Terminal=false

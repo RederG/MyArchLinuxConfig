@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Arch's Pacman Remover
+Comment=A cool pacman remover
+Exec=kitty fish -c 'pacman_remover'
+Icon=~/.local/share/icons/ArchLinuxLogo.svg
+Terminal=false
