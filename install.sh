@@ -15,8 +15,8 @@ sudo pacman -S fish
 
 echo ""
 
-printf "Configuring default shell to fish... "
+echo "Configuring default shell to fish..."
+echo ""
 chsh -s /bin/fish
 
-fish
 fish system_config.fish
