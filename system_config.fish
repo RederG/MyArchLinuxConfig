@@ -4,11 +4,17 @@ echo ""
 echo "Installing all applications..."
 
 echo ""
+echo "Installing yay's build dependencies"
+echo ""
+
+sudo pacman -S --needed base-devel
+
+echo ""
 echo "Installing yay..."
 echo ""
 
 git clone https://aur.archlinux.org/yay-git.git
-cd yay
+cd yay-git
 if test (makepkg -si)
     echo ""
     echo "Installing yay : OK"

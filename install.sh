@@ -11,7 +11,7 @@ echo ""
 echo "Installing fish..."
 echo ""
 
-sudo pacman -S fish
+sudo pacman -S --needed fish
 
 echo ""
 
