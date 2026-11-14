@@ -97,6 +97,22 @@ if test $status
         printf "UNSUCCESSFULL\n"
     end
 
+    printf "Configuring Hyprland's awww background... "
+
+    if test (cp -r local/share/backgrounds ~/.local/share/backgrounds)
+        printf "OK\n"
+    else
+        printf "UNSUCCESSFULL\n"
+    end
+
+    printf "Configuring icons... "
+
+    if test (cp -r local/share/icons ~/.local/share)
+        printf "OK\n"
+    else
+        printf "UNSUCCESSFULL\n"
+    end
+
     printf "Configuring helpfull applications... "
 
     if test (cp -r local/share/applications ~/.local/share)
@@ -127,11 +143,21 @@ if test $status
         sudo cp usr/share/sddm/themes/Sugar-Candy/Backgrounds/Orion-Pax.jpg /usr/share/sddm/themes/Sugar-Candy/Backgrounds
 
         echo ""
+        echo "Setting up SDDM's current theme and keyboard settings..."
+
+        sudo cp etc/sddm.conf.d /etc
+        sudo localectl set-x11-keymap fr
+
+        echo ""
         echo "SDDM configured"
     else
         echo "Installation of the Sugar Candy SDDM theme unsuccessfull"
         echo "Default SDDM theme will be used"
     end
+
+    echo ""
+    echo "Setting up pacman..."
+    sudo cp etc/pacman.conf /etc/pacman.conf
 
     echo ""
     echo "[BOOT CONFIGURATION]"
@@ -142,23 +168,20 @@ if test $status
 
     systemctl enable sddm
 
+    echo ""
     echo "Enabling pipewire at boot..."
 
     systemctl enable --user pipewire
 
+    echo ""
     echo "Enabling pipewire-pulse at boot..."
 
     systemctl enable --user pipewire-pulse
 
+    echo ""
     echo "Enabling wireplumber at boot..."
 
     systemctl enable --user wireplumber
 
-    read -p "Resarting computer ? (y/n) : " restart
-
-    if test "$restart" = y
-        reboot
-    else
-        echo "Installation completed"
-    end
+    echo "Installation complete"
 end
