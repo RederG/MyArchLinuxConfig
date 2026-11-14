@@ -21,7 +21,7 @@ if test (makepkg -si)
     echo ""
 
     cd ..
-    rm -rf yay
+    rm -rf yay-git
 
     echo ""
     echo "Installing other applications"
