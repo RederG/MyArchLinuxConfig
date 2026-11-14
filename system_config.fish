@@ -20,7 +20,10 @@ mkdir Directory
 cd Directory
 git clone https://aur.archlinux.org/yay.git
 cd yay
-if test (makepkg -si)
+
+set -l YAY_BUILD_RETURN_VALUE $(makepkg -si)
+
+if test $YAY_BUILD_RETURN_VALUE
     echo ""
     echo "Installing yay : OK"
     echo ""
@@ -154,8 +157,4 @@ if test (makepkg -si)
     else
         echo "Installation completed"
     end
-
-else
-    echo "yay was not installed"
-    echo "Aborting installation"
 end
