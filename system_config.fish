@@ -13,15 +13,15 @@ echo ""
 echo "Installing yay..."
 echo ""
 
-git clone https://aur.archlinux.org/yay-git.git
-cd yay-git
+git clone https://aur.archlinux.org/yay.git
+cd yay
 if test (makepkg -si)
     echo ""
     echo "Installing yay : OK"
     echo ""
 
     cd ..
-    rm -rf yay-git
+    rm -rf yay
 
     echo ""
     echo "Installing other applications"
