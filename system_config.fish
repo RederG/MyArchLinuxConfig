@@ -51,7 +51,7 @@ if test $status
 
     printf "Configuring Hyprland... "
 
-    if test (cp -r config/hypr ~/.config 2>/dev/null)
+    if cp -r config/hypr ~/.config 2>/dev/null
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -59,7 +59,7 @@ if test $status
 
     printf "Configuring QuickShell... "
 
-    if test (cp -r config/quickshell/ ~/.config/ 2>/dev/null)
+    if cp -r config/quickshell/ ~/.config/ 2>/dev/null
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -67,7 +67,7 @@ if test $status
 
     printf "Configuring Fish... "
 
-    if test (cp -r config/fish ~/.config 2>/dev/null)
+    if cp -r config/fish ~/.config 2>/dev/null
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -75,7 +75,7 @@ if test $status
 
     printf "Configuring btop... "
 
-    if test (cp -r config/btop ~/.config 2>/dev/null)
+    if cp -r config/btop ~/.config 2>/dev/null
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -83,7 +83,7 @@ if test $status
 
     printf "Configuring Kitty... "
 
-    if test (cp -r config/kitty ~/.config/ 2>/dev/null)
+    if cp -r config/kitty ~/.config/ 2>/dev/null
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -91,7 +91,7 @@ if test $status
 
     printf "Configuring Rofi... "
 
-    if test (cp -r config/rofi ~/.config 2>/dev/null)
+    if cp -r config/rofi ~/.config 2>/dev/null
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -99,7 +99,7 @@ if test $status
 
     printf "Configuring Hyprland's awww background... "
 
-    if test (cp -r local/share/backgrounds ~/.local/share/backgrounds)
+    if cp -r local/share/backgrounds ~/.local/share/backgrounds
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -107,7 +107,7 @@ if test $status
 
     printf "Configuring icons... "
 
-    if test (cp -r local/share/icons ~/.local/share)
+    if cp -r local/share/icons ~/.local/share
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -115,7 +115,7 @@ if test $status
 
     printf "Configuring helpfull applications... "
 
-    if test (cp -r local/share/applications ~/.local/share)
+    if cp -r local/share/applications ~/.local/share
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -168,7 +168,7 @@ if test $status
     echo ""
     echo "Enabling reflector.timer at boot..."
     
-    sudo systemctl enable refletor.timer
+    sudo systemctl enable reflector.timer
 
     echo ""
     echo "Enabling pipewire at boot..."
