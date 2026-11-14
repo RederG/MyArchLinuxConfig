@@ -41,7 +41,9 @@ if test $status
 
     sleep 2
 
-    cat my_apps.txt | xargs -r echo yay -S --needed | fish
+    cat my_apps.txt | xargs -r echo yay -S --needed > all_apps_to_install.fish
+
+    fish all_apps_to_install.fish
 
     echo ""
     echo "[USER SPECIFIC CONFIGURATION]"
@@ -49,7 +51,7 @@ if test $status
 
     printf "Configuring Hyprland... "
 
-    if test (cp config/hypr ~/.config 2>/dev/null)
+    if test (cp -r config/hypr ~/.config 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -57,7 +59,7 @@ if test $status
 
     printf "Configuring QuickShell... "
 
-    if test (cp config/quickshell/ ~/.config/ 2>/dev/null)
+    if test (cp -r config/quickshell/ ~/.config/ 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -65,7 +67,7 @@ if test $status
 
     printf "Configuring Fish... "
 
-    if test (cp config/fish ~/.config 2>/dev/null)
+    if test (cp -r config/fish ~/.config 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -73,7 +75,7 @@ if test $status
 
     printf "Configuring btop... "
 
-    if test (cp config/btop ~/.config 2>/dev/null)
+    if test (cp -r config/btop ~/.config 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -81,7 +83,7 @@ if test $status
 
     printf "Configuring Kitty... "
 
-    if test (cp config/kitty ~/.config/ 2>/dev/null)
+    if test (cp -r config/kitty ~/.config/ 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -89,7 +91,7 @@ if test $status
 
     printf "Configuring Rofi... "
 
-    if test (cp config/rofi ~/.config 2>/dev/null)
+    if test (cp -r config/rofi ~/.config 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -97,7 +99,7 @@ if test $status
 
     printf "Configuring helpfull applications... "
 
-    if test (cp local/share/applications ~/.local/share)
+    if test (cp -r local/share/applications ~/.local/share)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
