@@ -163,22 +163,27 @@ if test $status
     echo ""
     echo "Enabling SDDM at boot..."
 
-    sudo systemctl enable sddm
+    sudo systemctl enable sddm 
+
+    echo ""
+    echo "Enabling reflector.timer at boot..."
+    
+    sudo systemctl enable refletor.timer
 
     echo ""
     echo "Enabling pipewire at boot..."
 
-    sudo systemctl enable --user pipewire
+    systemctl enable --user pipewire
 
     echo ""
     echo "Enabling pipewire-pulse at boot..."
 
-    sudo systemctl enable --user pipewire-pulse
+    systemctl enable --user pipewire-pulse
 
     echo ""
     echo "Enabling wireplumber at boot..."
 
-    sudo systemctl enable --user wireplumber
+    systemctl enable --user wireplumber
 
     echo "Installation complete"
 end
