@@ -41,7 +41,7 @@ if test $status
 
     sleep 2
 
-    cat my_apps.txt | xargs -r yay -S --needed
+    cat my_apps.txt | xargs -r echo yay -S --needed | fish
 
     echo ""
     echo "[USER SPECIFIC CONFIGURATION]"
@@ -111,7 +111,9 @@ if test $status
 
     echo "Installing Sugar Candy SDDM theme..."
 
-    if test (yay -S sddm-theme-sugar-candy-git) 
+    yay -S sddm-theme-sugar-candy-git
+
+    if test $status 
         echo ""
         echo "Installation of Sugar Candy SDDM theme completed"
         echo "Modifying theme.conf..."
