@@ -13,7 +13,7 @@ echo ""
 echo "Installing yay..."
 echo ""
 
-set -l CURRENT_DIRECTORY pwd
+set -l CURRENT_DIRECTORY (pwd)
 
 cd ..
 mkdir Directory
