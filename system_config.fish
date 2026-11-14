@@ -13,6 +13,11 @@ echo ""
 echo "Installing yay..."
 echo ""
 
+set -l CURRENT_DIRECTORY pwd
+
+cd ..
+mkdir Directory
+cd Directory
 git clone https://aur.archlinux.org/yay.git
 cd yay
 if test (makepkg -si)
@@ -22,6 +27,10 @@ if test (makepkg -si)
 
     cd ..
     rm -rf yay
+
+    cd ..
+    rm -rf Directory
+    cd $CURRENT_DIRECTORY
 
     echo ""
     echo "Installing other applications"
