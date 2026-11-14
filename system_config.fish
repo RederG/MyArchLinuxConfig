@@ -21,9 +21,9 @@ cd Directory
 git clone https://aur.archlinux.org/yay.git
 cd yay
 
-set -l YAY_BUILD_RETURN_VALUE $(makepkg -si)
+makepkg -si
 
-if test $YAY_BUILD_RETURN_VALUE
+if test $status
     echo ""
     echo "Installing yay : OK"
     echo ""
