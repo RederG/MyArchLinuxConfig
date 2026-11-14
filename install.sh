@@ -17,6 +17,6 @@ echo ""
 
 echo "Configuring default shell to fish..."
 echo ""
-sudo chsh -s /bin/fish
+sudo chsh -s /bin/fish $USER
 
 fish system_config.fish

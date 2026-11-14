@@ -124,9 +124,6 @@ if test $status
     echo "Configuring SDDM..."
 
     echo ""
-    echo "Installing yay for Sugar-Candy SDDM theme..."
-    echo ""
-
     echo "Installing Sugar Candy SDDM theme..."
 
     yay -S sddm-theme-sugar-candy-git
@@ -145,7 +142,7 @@ if test $status
         echo ""
         echo "Setting up SDDM's current theme and keyboard settings..."
 
-        sudo cp etc/sddm.conf.d /etc
+        sudo cp -r etc/sddm.conf.d /etc
         sudo localectl set-x11-keymap fr
 
         echo ""
@@ -166,22 +163,22 @@ if test $status
     echo ""
     echo "Enabling SDDM at boot..."
 
-    systemctl enable sddm
+    sudo systemctl enable sddm
 
     echo ""
     echo "Enabling pipewire at boot..."
 
-    systemctl enable --user pipewire
+    sudo systemctl enable --user pipewire
 
     echo ""
     echo "Enabling pipewire-pulse at boot..."
 
-    systemctl enable --user pipewire-pulse
+    sudo systemctl enable --user pipewire-pulse
 
     echo ""
     echo "Enabling wireplumber at boot..."
 
-    systemctl enable --user wireplumber
+    sudo systemctl enable --user wireplumber
 
     echo "Installation complete"
 end
