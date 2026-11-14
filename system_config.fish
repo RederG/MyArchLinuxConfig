@@ -28,8 +28,6 @@ if test $status
     echo "Installing yay : OK"
     echo ""
 
-    sleep 2
-
     cd ..
     rm -rf yay
 
@@ -41,6 +39,8 @@ if test $status
     echo "Installing other applications"
     echo ""
 
+    sleep 1
+
     cat my_apps.txt | xargs -r yay -S --needed
 
     echo ""
@@ -49,7 +49,7 @@ if test $status
 
     printf "Configuring Hyprland... "
 
-    if test (mkdir -p ~/.config/hypr && cp config/hypr/* ~/.config/hypr)
+    if test (mkdir -p ~/.config/hypr && cp config/hypr/* ~/.config/hypr 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -57,7 +57,7 @@ if test $status
 
     printf "Configuring QuickShell... "
 
-    if test (mkdir -p ~/.config/quickshell && cp config/quickshell/* ~/.config/quickshell)
+    if test (mkdir -p ~/.config/quickshell && cp config/quickshell/* ~/.config/quickshell 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -65,7 +65,7 @@ if test $status
 
     printf "Configuring Fish... "
 
-    if test (mkdir -p ~/.config/fish && cp config/fish/* ~/.config/fish)
+    if test (mkdir -p ~/.config/fish && cp config/fish/* ~/.config/fish 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -73,7 +73,7 @@ if test $status
 
     printf "Configuring btop... "
 
-    if test (mkdir -p ~/.config/btop && cp config/btop/* ~/.config/btop)
+    if test (mkdir -p ~/.config/btop && cp config/btop/* ~/.config/btop 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -81,7 +81,7 @@ if test $status
 
     printf "Configuring Kitty... "
 
-    if test (mkdir -p ~/.config/kitty && cp config/kitty/* ~/.config/kitty)
+    if test (mkdir -p ~/.config/kitty && cp config/kitty/* ~/.config/kitty 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -89,7 +89,7 @@ if test $status
 
     printf "Configuring Rofi... "
 
-    if test (mkdir -p ~/.config/rofi && cp config/rofi/* ~/.config/rofi)
+    if test (mkdir -p ~/.config/rofi && cp config/rofi/* ~/.config/rofi 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
