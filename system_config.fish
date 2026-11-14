@@ -39,7 +39,7 @@ if test $status
     echo "Installing other applications"
     echo ""
 
-    sleep 1
+    sleep 2
 
     cat my_apps.txt | xargs -r yay -S --needed
 
@@ -49,7 +49,7 @@ if test $status
 
     printf "Configuring Hyprland... "
 
-    if test (mkdir -p ~/.config/hypr && cp config/hypr/* ~/.config/hypr 2>/dev/null)
+    if test (cp config/hypr ~/.config 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -57,7 +57,7 @@ if test $status
 
     printf "Configuring QuickShell... "
 
-    if test (mkdir -p ~/.config/quickshell && cp config/quickshell/* ~/.config/quickshell 2>/dev/null)
+    if test (cp config/quickshell/ ~/.config/ 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -65,7 +65,7 @@ if test $status
 
     printf "Configuring Fish... "
 
-    if test (mkdir -p ~/.config/fish && cp config/fish/* ~/.config/fish 2>/dev/null)
+    if test (cp config/fish ~/.config 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -73,7 +73,7 @@ if test $status
 
     printf "Configuring btop... "
 
-    if test (mkdir -p ~/.config/btop && cp config/btop/* ~/.config/btop 2>/dev/null)
+    if test (cp config/btop ~/.config 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -81,7 +81,7 @@ if test $status
 
     printf "Configuring Kitty... "
 
-    if test (mkdir -p ~/.config/kitty && cp config/kitty/* ~/.config/kitty 2>/dev/null)
+    if test (cp config/kitty ~/.config/ 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -89,7 +89,7 @@ if test $status
 
     printf "Configuring Rofi... "
 
-    if test (mkdir -p ~/.config/rofi && cp config/rofi/* ~/.config/rofi 2>/dev/null)
+    if test (cp config/rofi ~/.config 2>/dev/null)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -97,7 +97,7 @@ if test $status
 
     printf "Configuring helpfull applications... "
 
-    if test (mkdir -p ~/.local/share/applications && cp local/share/applications/* ~/.local/share/applications)
+    if test (cp local/share/applications ~/.local/share)
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
