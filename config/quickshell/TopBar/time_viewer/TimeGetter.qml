@@ -10,7 +10,7 @@ Singleton {
 
     Process {
         id: time_getter_proc
-        command: ["date", "+%H:%M"]
+        command: ["date", "+%H:%M - %a %d %b %y"]
         running: true
         stdout: StdioCollector {
             onStreamFinished: root.time = this.text.trim()

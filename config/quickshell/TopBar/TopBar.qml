@@ -3,6 +3,7 @@ import QtQuick
 
 import "workspace_manager" as WorkspaceManager
 import "time_viewer" as TimeViewer
+import "multi_control" as Multicontrol
 
 Scope {
     id: root
@@ -33,6 +34,10 @@ Scope {
 
                 WorkspaceManager.WorkspaceViewer {
                     
+                }
+
+                Multicontrol.MainBar {
+                    anchors.right: parent.right
                 }
             }
         }

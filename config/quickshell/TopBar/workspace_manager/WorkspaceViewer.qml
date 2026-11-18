@@ -3,7 +3,6 @@ import Quickshell.Hyprland
 
 Rectangle {
     Row {
-
         Rectangle {
             implicitHeight: workspaces_rect.implicitHeight + 4
             implicitWidth: workspaces_rect.implicitWidth + 4
@@ -98,7 +97,7 @@ Rectangle {
                             }
                         }
                     })
-                    let max_size = 60
+                    let max_size = 52
                     if(current_window_name.length > max_size) {
                         current_window_name = current_window_name.substring(0, max_size) + "..."
                     }
