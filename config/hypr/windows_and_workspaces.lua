@@ -57,3 +57,10 @@ hl.window_rule({
 
     float = true
 })
+
+hl.window_rule({
+    name = "set-gnome-calculator-floating",
+    match = { class = "org.gnome.Calculator" },
+
+    float = true
+})

@@ -12,6 +12,7 @@
 -- 	hl.exec_cmd("sudo ")
 -- end)
 hl.on("hyprland.start", function()
+    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
     hl.exec_cmd("qs -c TopBar -d")
     hl.exec_cmd("awww-daemon")
     hl.exec_cmd("clipcatd; sleep 1; clipcatctl clear")

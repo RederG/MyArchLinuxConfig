@@ -11,9 +11,12 @@ fastfetch
 firefox
 firefoxpwa
 fish
+foot
 fzf
 git
 github-cli
+gnome-calculator
+gnome-themes-extra
 grub
 hyprland
 hyprpicker
@@ -29,11 +32,13 @@ mesa-utils
 nano
 neovim
 networkmanager
+nwg-look
 obs-studio
 pavucontrol
 pipewire-alsa
 pipewire-pulse
 plymouth
+qt6ct
 quickshell
 qview
 reflector
@@ -51,5 +56,6 @@ vlc-plugins-all
 wireplumber
 wl-clipboard
 wonderwall
+xdg-desktop-portal-hyprland
 xorg-xdpyinfo
 yay
