@@ -3,7 +3,7 @@ import QtQuick.Layouts
 
 Rectangle {
     implicitHeight: 30
-    implicitWidth: child.implicitWidth
+    implicitWidth: main_rect.implicitWidth
 
     color: "#4700b3ff"
 
@@ -14,23 +14,33 @@ Rectangle {
 
     radius: 15.0
 
-    RowLayout {
-        id: child
-        spacing: 20
+    Rectangle {
+        id: main_rect
+        implicitHeight: controls.implicitHeight
+        implicitWidth: controls.implicitWidth + 28
 
-        Control {
-            icon_path: "icons/Clipboard.png"
-            command: ["clipcat-menu"]
-        }
+        color: "transparent"
 
-        Control {
-            icon_path: "icons/Wifi.svg"
-            command: [""]
-        }
-        
-        Control {
-            icon_path: "icons/Power-button.svg"
-            command: ["fish", "-c", "system_state_changer"]
+        RowLayout {
+            id: controls
+            spacing: 10
+
+            anchors.centerIn: parent
+
+            Control {
+                icon_path: "icons/Clipboard.png"
+                command: ["clipcat-menu"]
+            }
+
+            Control {
+                icon_path: "icons/Wifi.svg"
+                command: [""]
+            }
+            
+            Control {
+                icon_path: "icons/Power-button.svg"
+                command: ["fish", "-c", "system_state_changer"]
+            }
         }
     }
 }

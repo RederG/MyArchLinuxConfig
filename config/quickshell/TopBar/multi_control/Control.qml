@@ -2,36 +2,34 @@ import QtQuick
 import QtQuick.Controls
 import Quickshell.Io
 
-Rectangle {
-    id: root
+Button {
+    id: button
 
-    required property string icon_path
     required property list<string> command
+    required property string icon_path
 
-    implicitHeight: button.implicitHeight
-    implicitWidth: button.implicitWidth
+    background: Rectangle {
+        anchors.centerIn: button
+        implicitHeight: 30
+        implicitWidth: icon.implicitWidth
 
-    color: "transparent"
+        color: "transparent"
 
-    border.color: "transparent"
-
-    Button {
-        id: button
-
-        background: Image {
-            source: root.icon_path
+        Image {
+            id: icon
+            source: button.icon_path
             anchors.centerIn: parent
-            sourceSize.height: 28
+            sourceSize.height: 22
         }
+    }
 
-        Process {
-            id: thing_to_execute
-            command: root.command
-            running: false
-        }
+    Process {
+        id: thing_to_execute
+        command: button.command
+        running: false
+    }
 
-        onClicked: {
-            thing_to_execute.running = true
-        }
+    onClicked: {
+        thing_to_execute.running = true
     }
 }
