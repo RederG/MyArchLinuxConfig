@@ -23,8 +23,8 @@ Rectangle {
         }
 
         Control {
-            icon_path: "icons/Wifi.svg"
-            command: [""]
+            icon_path: "icons/Sound.png"
+            command: ["pavucontrol"]
             height_model: main_rect.height_model
         }
         

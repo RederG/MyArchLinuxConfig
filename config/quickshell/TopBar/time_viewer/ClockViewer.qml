@@ -4,7 +4,7 @@ Rectangle {
     required property int height_model
 
     implicitHeight: height_model
-    implicitWidth: time_text.implicitWidth + 16
+    implicitWidth: time_text.implicitWidth + 20
 
     radius: 16.0
 
