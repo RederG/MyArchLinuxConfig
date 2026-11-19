@@ -1,11 +1,12 @@
 import QtQuick
 
 Rectangle {
+    required property int height_model
 
-    implicitHeight: time_text.implicitHeight + 8
-    implicitWidth: time_text.implicitWidth + 50
+    implicitHeight: height_model
+    implicitWidth: time_text.implicitWidth + 16
 
-    radius: 11.0
+    radius: 16.0
 
     Text {
         id: time_text

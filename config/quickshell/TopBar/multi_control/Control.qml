@@ -3,29 +3,34 @@ import QtQuick.Controls
 import Quickshell.Io
 
 Button {
-    id: button
+    id: control
 
     required property list<string> command
     required property string icon_path
+    required property string height_model
+
+    function icon_height() {
+        return height_model - (height_model * 0.3)
+    }
 
     background: Rectangle {
-        anchors.centerIn: button
-        implicitHeight: 30
+        anchors.centerIn: control
+        implicitHeight: control.height_model
         implicitWidth: icon.implicitWidth
 
         color: "transparent"
 
         Image {
             id: icon
-            source: button.icon_path
+            source: control.icon_path
             anchors.centerIn: parent
-            sourceSize.height: 22
+            sourceSize.height: control.icon_height()
         }
     }
 
     Process {
         id: thing_to_execute
-        command: button.command
+        command: control.command
         running: false
     }
 

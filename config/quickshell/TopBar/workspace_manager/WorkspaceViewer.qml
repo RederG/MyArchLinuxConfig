@@ -2,6 +2,10 @@ import QtQuick
 import Quickshell.Hyprland
 
 Rectangle {
+    id: workspace_viewer
+
+    required property int height_model
+
     Row {
         Rectangle {
             implicitHeight: workspaces_rect.implicitHeight + 4
@@ -39,79 +43,54 @@ Rectangle {
 
                     WorkspaceButton {
                         workspace_id: 0
+                        height_model: workspace_viewer.height_model - 4
                     }
 
                     WorkspaceButton {
                         workspace_id: 1
+                        height_model: workspace_viewer.height_model - 4
                     }
 
                     WorkspaceButton {
                         workspace_id: 2
+                        height_model: workspace_viewer.height_model - 4
                     }
 
                     WorkspaceButton {
                         workspace_id: 3
+                        height_model: workspace_viewer.height_model - 4
                     }
 
                     WorkspaceButton {
                         workspace_id: 4
+                        height_model: workspace_viewer.height_model - 4
                     }
 
                     WorkspaceButton {
                         workspace_id: 5
+                        height_model: workspace_viewer.height_model - 4
                     }
 
                     WorkspaceButton {
                         workspace_id: 6
+                        height_model: workspace_viewer.height_model - 4
                     }
 
                     WorkspaceButton {
                         workspace_id: 7
+                        height_model: workspace_viewer.height_model - 4
                     }
 
                     WorkspaceButton {
                         workspace_id: 8
+                        height_model: workspace_viewer.height_model - 4
                     }
                 }
             }
         }
 
-        Rectangle {
-            implicitHeight: workspaces_rect.implicitHeight + 5
-            implicitWidth: window_title.implicitWidth + 5
-
-            color: "transparent"
-
-            Text {
-                id: window_title
-
-                property string window_name: {
-                    let current_window_name = "";
-                    Hyprland.workspaces.values.map((workspace) => {
-                        if(workspace.active) {
-                            for(let j = 0; j < workspace.toplevels.values.length; j++) {
-                                let toplevel = workspace.toplevels.values[j]
-                                if(toplevel.activated) {
-                                    current_window_name = toplevel.title
-                                }
-                            }
-                        }
-                    })
-                    let max_size = 52
-                    if(current_window_name.length > max_size) {
-                        current_window_name = current_window_name.substring(0, max_size) + "..."
-                    }
-                    return current_window_name
-                }
-
-                text: window_name
-                
-                color: "white"
-
-                font.family: "JetBrainsMono Nerd Font"
-                font.pixelSize: 14
-                anchors.centerIn: parent
-            }
+        WindowNameViewer {
+            height_model: workspace_viewer.height_model
         }
     }    
 }

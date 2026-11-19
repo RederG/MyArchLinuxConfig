@@ -4,8 +4,9 @@ import QtQuick.Controls
 
 Item {
     required property int workspace_id
+    required property int height_model
 
-    readonly property int workspace_button_height: 30
+    property int workspace_button_height: height_model
     readonly property int workspace_button_width: 60
     readonly property int workspace_button_width_no_active: 30
     readonly property string active_workspace_color: '#ab0084ff' // '#005eff'

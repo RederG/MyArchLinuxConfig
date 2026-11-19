@@ -13,6 +13,8 @@ Scope {
 
         delegate: Component {
             PanelWindow {
+                id: top_bar
+
                 required property var modelData
 
                 color: "transparent"
@@ -25,19 +27,22 @@ Scope {
                     right: true
                 }
 
-                implicitHeight: 35
+                implicitHeight: 30
 
                 TimeViewer.ClockViewer {
+                    height_model: top_bar.implicitHeight 
                     anchors.centerIn: parent
-                    color: "#4700b3ff"     
+                    color: "#4700b3ff"
                 }
 
                 WorkspaceManager.WorkspaceViewer {
-                    
+                    anchors.left: parent.left
+                    height_model: top_bar.implicitHeight
                 }
 
-                Multicontrol.MainBar {
+                Multicontrol.MultiControl {
                     anchors.right: parent.right
+                    height_model: top_bar.implicitHeight
                 }
             }
         }
