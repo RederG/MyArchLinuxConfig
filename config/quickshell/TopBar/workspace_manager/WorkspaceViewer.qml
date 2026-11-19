@@ -37,54 +37,9 @@ Rectangle {
                     }
                 }
 
-                Row {
+                AllWorkspaces {
                     id: workspaces
-                    spacing: 5
-
-                    WorkspaceButton {
-                        workspace_id: 0
-                        height_model: workspace_viewer.height_model - 4
-                    }
-
-                    WorkspaceButton {
-                        workspace_id: 1
-                        height_model: workspace_viewer.height_model - 4
-                    }
-
-                    WorkspaceButton {
-                        workspace_id: 2
-                        height_model: workspace_viewer.height_model - 4
-                    }
-
-                    WorkspaceButton {
-                        workspace_id: 3
-                        height_model: workspace_viewer.height_model - 4
-                    }
-
-                    WorkspaceButton {
-                        workspace_id: 4
-                        height_model: workspace_viewer.height_model - 4
-                    }
-
-                    WorkspaceButton {
-                        workspace_id: 5
-                        height_model: workspace_viewer.height_model - 4
-                    }
-
-                    WorkspaceButton {
-                        workspace_id: 6
-                        height_model: workspace_viewer.height_model - 4
-                    }
-
-                    WorkspaceButton {
-                        workspace_id: 7
-                        height_model: workspace_viewer.height_model - 4
-                    }
-
-                    WorkspaceButton {
-                        workspace_id: 8
-                        height_model: workspace_viewer.height_model - 4
-                    }
+                    height_model: workspace_viewer.height_model - 4
                 }
             }
         }

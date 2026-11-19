@@ -7,8 +7,8 @@ Item {
     required property int height_model
 
     property int workspace_button_height: height_model
-    readonly property int workspace_button_width: 60
-    readonly property int workspace_button_width_no_active: 30
+    property int workspace_button_width: workspace_button_height * 2
+    property int workspace_button_width_no_active: height_model
     readonly property string active_workspace_color: '#ab0084ff' // '#005eff'
     readonly property string not_active_workspace_color: "transparent"
 
