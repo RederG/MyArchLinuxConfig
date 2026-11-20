@@ -5,49 +5,59 @@ Row {
     spacing: 5
 
     required property int height_model
+    required property real rect_corner_radius
 
     WorkspaceButton {
         workspace_id: 0
         height_model: workspaces.height_model
+        rect_corner_radius: workspaces.rect_corner_radius
     }
 
     WorkspaceButton {
         workspace_id: 1
         height_model: workspaces.height_model
+        rect_corner_radius: workspaces.rect_corner_radius
     }
 
     WorkspaceButton {
         workspace_id: 2
         height_model: workspaces.height_model
+        rect_corner_radius: workspaces.rect_corner_radius
     }
 
     WorkspaceButton {
         workspace_id: 3
         height_model: workspaces.height_model
+        rect_corner_radius: workspaces.rect_corner_radius
     }
 
     WorkspaceButton {
         workspace_id: 4
         height_model: workspaces.height_model
+        rect_corner_radius: workspaces.rect_corner_radius
     }
 
     WorkspaceButton {
         workspace_id: 5
         height_model: workspaces.height_model
+        rect_corner_radius: workspaces.rect_corner_radius
     }
 
     WorkspaceButton {
         workspace_id: 6
         height_model: workspaces.height_model
+        rect_corner_radius: workspaces.rect_corner_radius
     }
 
     WorkspaceButton {
         workspace_id: 7
         height_model: workspaces.height_model
+        rect_corner_radius: workspaces.rect_corner_radius
     }
 
     WorkspaceButton {
         workspace_id: 8
         height_model: workspaces.height_model
+        rect_corner_radius: workspaces.rect_corner_radius
     }
 }

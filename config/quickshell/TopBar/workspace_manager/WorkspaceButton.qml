@@ -3,8 +3,11 @@ import QtQuick
 import QtQuick.Controls
 
 Item {
+    id: root 
+
     required property int workspace_id
     required property int height_model
+    required property real rect_corner_radius
 
     property int workspace_button_height: height_model
     property int workspace_button_width: workspace_button_height * 2
@@ -31,7 +34,7 @@ Item {
 
         background: Rectangle {
             color: button.background_color
-            radius: 16.0
+            radius: root.rect_corner_radius
             // transitions: Transition {
             //     PropertyAnimation {
             //         property: "width"

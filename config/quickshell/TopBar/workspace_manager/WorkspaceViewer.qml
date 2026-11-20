@@ -5,6 +5,7 @@ Rectangle {
     id: workspace_viewer
 
     required property int height_model
+    required property real rect_corner_radius
 
     Row {
         Rectangle {
@@ -18,7 +19,7 @@ Rectangle {
                 width: 2
             }
 
-            radius: 17.0
+            radius: workspace_viewer.rect_corner_radius
 
             Rectangle {
                 id: workspaces_rect
@@ -29,7 +30,7 @@ Rectangle {
 
                 anchors.centerIn: parent
 
-                radius: 15.0
+                radius: workspace_viewer.rect_corner_radius
 
                 Behavior on implicitWidth {
                     PropertyAnimation {
@@ -40,6 +41,7 @@ Rectangle {
                 AllWorkspaces {
                     id: workspaces
                     height_model: workspace_viewer.height_model - 4
+                    rect_corner_radius: workspace_viewer.rect_corner_radius
                 }
             }
         }

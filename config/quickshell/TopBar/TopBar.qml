@@ -15,6 +15,8 @@ Scope {
             PanelWindow {
                 id: top_bar
 
+                property real rect_corner_radius: 16.0
+
                 required property var modelData
 
                 color: "transparent"
@@ -33,16 +35,19 @@ Scope {
                     height_model: top_bar.implicitHeight 
                     anchors.centerIn: parent
                     color: "#4700b3ff"
+                    rect_corner_radius: top_bar.rect_corner_radius
                 }
 
                 WorkspaceManager.WorkspaceViewer {
                     anchors.left: parent.left
                     height_model: top_bar.implicitHeight
+                    rect_corner_radius: top_bar.rect_corner_radius
                 }
 
                 Multicontrol.MultiControl {
                     anchors.right: parent.right
                     height_model: top_bar.implicitHeight
+                    rect_corner_radius: top_bar.rect_corner_radius
                 }
             }
         }

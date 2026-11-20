@@ -5,6 +5,7 @@ Rectangle {
     id: root
 
     required property int height_model
+    required property real rect_corner_radius
 
     implicitHeight: height_model
     implicitWidth: all_controls.implicitWidth
@@ -16,10 +17,11 @@ Rectangle {
         width: 2
     }
 
-    radius: 15.0
+    radius: rect_corner_radius
 
     AllControls {
         id: all_controls
         height_model: root.height_model
+        rect_corner_radius: root.rect_corner_radius
     }
 }
