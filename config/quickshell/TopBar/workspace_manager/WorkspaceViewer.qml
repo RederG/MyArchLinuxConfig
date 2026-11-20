@@ -6,6 +6,7 @@ Rectangle {
 
     required property int height_model
     required property real rect_corner_radius
+    required property int rect_border_width
 
     Row {
         Rectangle {
@@ -16,7 +17,7 @@ Rectangle {
 
             border {
                 color: '#b700ffe1'
-                width: 2
+                width: workspace_viewer.rect_border_width
             }
 
             radius: workspace_viewer.rect_corner_radius

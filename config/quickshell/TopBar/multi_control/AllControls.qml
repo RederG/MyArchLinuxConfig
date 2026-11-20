@@ -17,6 +17,11 @@ Rectangle {
 
         anchors.centerIn: parent
 
+        BatteryViewer {
+            height_model: main_rect.height_model
+            rect_corner_radius: main_rect.rect_corner_radius
+        }
+
         Control {
             icon_path: "icons/Clipboard.png"
             command: ["clipcat-menu"]

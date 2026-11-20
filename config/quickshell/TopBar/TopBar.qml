@@ -16,6 +16,7 @@ Scope {
                 id: top_bar
 
                 property real rect_corner_radius: 16.0
+                property int rect_border_width: 2
 
                 required property var modelData
 
@@ -42,12 +43,14 @@ Scope {
                     anchors.left: parent.left
                     height_model: top_bar.implicitHeight
                     rect_corner_radius: top_bar.rect_corner_radius
+                    rect_border_width: top_bar.rect_border_width
                 }
 
                 Multicontrol.MultiControl {
                     anchors.right: parent.right
                     height_model: top_bar.implicitHeight
                     rect_corner_radius: top_bar.rect_corner_radius
+                    rect_border_width: top_bar.rect_border_width
                 }
             }
         }

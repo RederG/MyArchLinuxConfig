@@ -5,6 +5,7 @@ Rectangle {
     id: root
 
     required property int height_model
+    required property int rect_border_width
     required property real rect_corner_radius
 
     implicitHeight: height_model
@@ -14,7 +15,7 @@ Rectangle {
 
     border {
         color: "#b700ffe1"
-        width: 2
+        width: root.rect_border_width
     }
 
     radius: rect_corner_radius
