@@ -30,7 +30,7 @@ Scope {
                     right: true
                 }
 
-                implicitHeight: 32
+                implicitHeight: 34
 
                 TimeViewer.ClockViewer {
                     height_model: top_bar.implicitHeight 
