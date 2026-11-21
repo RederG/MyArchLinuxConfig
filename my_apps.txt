@@ -19,9 +19,9 @@ github-cli
 gnome-calculator
 gnome-themes-extra
 grub
+gthumb
 hyprland
 hyprpicker
-imageviewer
 kitty
 libreoffice-fresh
 linux
@@ -41,7 +41,6 @@ pipewire-pulse
 plymouth
 qt6ct
 quickshell
-qview
 reflector
 rofi
 sddm

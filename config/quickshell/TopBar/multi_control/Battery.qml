@@ -60,6 +60,8 @@ Rectangle {
                 color: root.battery_color
             }
 
+            radius: 4.0
+
             Rectangle {
                 implicitHeight: root.reduce(parent.implicitHeight, 46)
                 implicitWidth: root.reduce(parent.implicitWidth, 32)
