@@ -23,6 +23,10 @@ Rectangle {
         return value - value * percentage / 100
     }
 
+    function increase(value, percentage) {
+        return value + value * percentage / 100
+    }
+
     function battery_state_color() {
         if(charging)
             return '#00ff1a'
@@ -74,7 +78,14 @@ Rectangle {
                     implicitHeight: parent.implicitHeight
                     implicitWidth: parent.implicitWidth * root.battery_percentage_number() / 100
 
-                    color: root.battery_state_color()
+                    color: root.battery_color
+                }
+
+                Image {
+                    source: "icons/ElectricArc.png"
+                    anchors.centerIn: parent
+                    visible: root.charging
+                    sourceSize.height: root.increase(parent.implicitHeight, 140)
                 }
             }
         }

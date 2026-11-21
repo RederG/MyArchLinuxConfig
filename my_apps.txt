@@ -24,6 +24,7 @@ hyprland
 hyprpicker
 kitty
 libreoffice-fresh
+libresprite
 linux
 linux-firmware
 man-db
