@@ -24,7 +24,7 @@ Rectangle {
                     }
                 }
             })
-            let max_size = 52
+            let max_size = 48
             if(current_window_name.length > max_size) {
                 current_window_name = current_window_name.substring(0, max_size) + "..."
             }

@@ -1,0 +1,5 @@
+[watcher]
+enable_primary = false
+max_history = 50
+history_file_path = "~/.cache/clipcat/clipcatd-history"
+
