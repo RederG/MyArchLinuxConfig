@@ -97,6 +97,14 @@ if test $status
         printf "UNSUCCESSFULL\n"
     end
 
+    printf "Configuring Clipcat... "
+
+    if cp -r config/clipcat ~/.config 2>/dev/null
+        printf "OK\n"
+    else
+        printf "UNSUCCESSFULL\n"
+    end
+
     printf "Configuring Hyprland's awww background... "
 
     if cp -r local/share/backgrounds ~/.local/share/backgrounds
@@ -186,4 +194,7 @@ if test $status
     systemctl enable --user wireplumber
 
     echo "Installation complete"
+else
+    echo "Installing yay : UNSUCCESSFUL"
+    echo "Aborting installation"
 end
