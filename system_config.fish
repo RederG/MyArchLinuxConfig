@@ -43,12 +43,14 @@ if test $status
     if test "$response" = "" || test "$response" = y || test "$response" = Y
         echo "Installing all apps"
         echo ""
-        slepp 2
+        sleep 2
+        set -l minimal_install yes
         cat my_apps.txt | xargs -r echo yay -S --needed > all_apps_to_install.fish
     else
         echo "Installing needed apps"
         echo ""
-        slepp 2
+        sleep 2
+        set -l minimal_install no
         cat minimal_apps.txt | xargs -r echo yay -S --needed > all_apps_to_install.fish
     end
 
@@ -116,7 +118,9 @@ if test $status
 
     printf "Configuring Hyprland's awww background... "
 
-    if cp -r local/share/backgrounds ~/.local/share/backgrounds
+    if test "$minimal_install" = yes
+        printf "SKIPPED\n"
+    else if cp -r local/share/backgrounds ~/.local/share/backgrounds
         printf "OK\n"
     else
         printf "UNSUCCESSFULL\n"
@@ -153,8 +157,6 @@ if test $status
         sudo cp usr/share/sddm/themes/Sugar-Candy/theme.conf /usr/share/sddm/themes/Sugar-Candy/theme.conf
 
         echo "Modifying background..."
-
-        sudo cp usr/share/sddm/themes/Sugar-Candy/Backgrounds/Orion-Pax.jpg /usr/share/sddm/themes/Sugar-Candy/Backgrounds
 
         echo ""
         echo "Setting up SDDM's current theme and keyboard settings..."

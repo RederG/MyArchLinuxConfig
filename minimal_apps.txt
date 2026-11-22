@@ -14,8 +14,10 @@ pipewire-pulse
 plymouth
 qt6ct
 quickshell
+reflector
 rofi
 sddm
+ttf-jetbrains-mono-nerd
 wireplumber
 wl-clipboard
 xdg-desktop-portal-hyprland
