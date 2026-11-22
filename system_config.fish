@@ -41,8 +41,14 @@ if test $status
 
     read -P "Do you want all applications (if you say 'n' or 'N', only the minimal setup will be installed) ? (Y/n) : " -l response
     if test "$response" = "" || test "$response" = y || test "$response" = Y
+        echo "Installing all apps"
+        echo ""
+        slepp 2
         cat my_apps.txt | xargs -r echo yay -S --needed > all_apps_to_install.fish
     else
+        echo "Installing needed apps"
+        echo ""
+        slepp 2
         cat minimal_apps.txt | xargs -r echo yay -S --needed > all_apps_to_install.fish
     end
 
