@@ -1,0 +1,15 @@
+hyprland
+btop
+clipcat
+kitty
+quickshell
+rofi
+pipewire-alsa
+pipewire-pulse
+wireplumber
+wl-clipboard
+xdg-desktop-portal-hyprland
+plymouth
+hyprpicker
+nwg-look
+qt6ct

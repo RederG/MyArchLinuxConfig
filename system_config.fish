@@ -39,9 +39,12 @@ if test $status
     echo "Installing other applications"
     echo ""
 
-    sleep 2
-
-    cat my_apps.txt | xargs -r echo yay -S --needed > all_apps_to_install.fish
+    read -P "Do you want all applications (if you say 'n' or 'N', only the minimal setup will be installed) ? (Y/n) : " -l response
+    if test "$response" = "" || test "$response" = y || test "$response" = Y
+        cat my_apps.txt | xargs -r echo yay -S --needed > all_apps_to_install.fish
+    else
+        cat minimal_apps.txt | xargs -r echo yay -S --needed > all_apps_to_install.fish
+    end
 
     fish all_apps_to_install.fish
 
@@ -193,7 +196,16 @@ if test $status
 
     systemctl enable --user wireplumber
 
+    echo ""
     echo "Installation complete"
+
+    read -P "Do you want to reboot ? (Y/n) : " -l response
+    if test "$response" = "" || test "$response" = y || test "$response" = Y
+        reboot
+    else
+        echo "So good byeeee !"
+        echo "Enjoy your system !"
+    end
 else
     echo "Installing yay : UNSUCCESSFUL"
     echo "Aborting installation"
