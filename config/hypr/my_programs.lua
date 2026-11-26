@@ -1,5 +1,6 @@
 terminal                = "kitty"
 fileManager             = "dolphin"
+browser                 = "firefox"
 app_launcher            = "rofi -show drun -show-icons"
 commands_launcher       = "rofi -show run"
 clipboard_manager       = "clipcat-menu"

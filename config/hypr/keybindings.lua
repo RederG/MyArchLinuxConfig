@@ -8,6 +8,7 @@ hl.bind(mainMod .. " + M", 					hl.dsp.exec_cmd("command -v hyprshutdown >/dev/n
 hl.bind(mainMod .. " + E", 					hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", 					hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SPACE", 				hl.dsp.exec_cmd(app_launcher))
+hl.bind(mainMod .. " + B", 					hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + SPACE + RETURN", 	hl.dsp.exec_cmd(commands_launcher))
 hl.bind(mainMod .. " + SPACE + C", 			hl.dsp.exec_cmd(clipboard_manager))
 hl.bind(mainMod .. " + SPACE + I", 			hl.dsp.exec_cmd(arch_pacman_installer))
